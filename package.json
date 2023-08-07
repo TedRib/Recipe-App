@@ -4,7 +4,7 @@
   "description": "A recipe App",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --no-scope-hoist"
   },
   "author": "Ted Ribiro",
   "license": "ISC",
