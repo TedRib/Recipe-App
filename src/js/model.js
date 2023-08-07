@@ -16,7 +16,8 @@ export const state = {
 export const loadRecipe = async function (id) {
   //Get API data
   try {
-    const data = await AJAX(`${API_URL}${id}?key=${KEY}`)
+    const data = await AJAX(`${API_URL}/${id}?key=${KEY}`)
+
     const { recipe } = data.data
 
     state.recipe = {
