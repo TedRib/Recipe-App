@@ -42,17 +42,17 @@ export const loadRecipe = async function (id) {
 }
 
 const createRecipeObject = function (data) {
-  const { recipe } = data.data
+  const { recipes } = data.data
   return {
-    id: recipe.id,
-    title: recipe.title,
-    publisher: recipe.publisher,
-    sourceUrl: recipe.source_url,
-    image: recipe.image_url,
-    servings: recipe.servings,
-    cookingTime: recipe.cooking_time,
-    ingredients: recipe.ingredients,
-    ...(recipe.key && { key: recipe.key }),
+    id: recipes.id,
+    title: recipes.title,
+    publisher: recipes.publisher,
+    sourceUrl: recipes.source_url,
+    image: recipes.image_url,
+    servings: recipes.servings,
+    cookingTime: recipes.cooking_time,
+    ingredients: recipes.ingredients,
+    ...(recipes.key && { key: recipes.key }),
   }
 }
 
